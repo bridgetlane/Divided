@@ -146,8 +146,10 @@ window.onload = function() {
     
     function handleCrossed(c, q){            
             q.destroy();
-            health++;
-            healthText.setText(health.toString());
+            if (!hasLost){
+                health++;
+                healthText.setText(health.toString());
+            }
             spawnTwo();
     };
 }
